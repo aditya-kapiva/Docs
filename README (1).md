@@ -70,9 +70,9 @@ used to convey the results of a client’s request. The status codes are divided
 ```
 {
   "status": "error",
+  "message": "The requested resource could not be found.",
   "error": {
     "code": "not_found",
-    "message": "The requested resource could not be found.",
     "details": "Please check the resource ID and try again."
   }
 }
