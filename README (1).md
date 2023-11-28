@@ -51,54 +51,20 @@ used to convey the results of a client’s request. The status codes are divided
 
 ## Below are examples of common response structures for both error and success scenarios using JSON format. These examples follow a consistent format for clarity and ease of handling:
 
-### Error Response Body:
-
-```
-{
-  "error": {
-    "code": "not_found",
-    "message": "The requested resource could not be found.",
-    "details": "Please check the resource ID and try again."
-  }
-}
-```
-* **error**: An object containing details about the error.
-    * **code**: A machine-readable error code.
-    * **message**: A human-readable summary of the error.
-    * **details**: Additional details about the error, which may include specific information for debugging.
-
-### Data Response Body:
-```
-{
-  "data": {
-    "message": "User successfully retrieved.",
-    "user": {
-      "id": 123,
-      "name": "John Doe",
-      "email": "john.doe@example.com"
-    }
-  }
-}
-```
-
-* **data**: An object containing the successful response data.
-    * **message**: A message indicating the success of the operation.
-    * **user**: The requested user's information.
-
-### Handling Both Success and Error in One Response:
-Sometimes, it's useful to include a success or status field in your response to explicitly indicate success or failure. Here's an example that combines both success and error scenarios:
+## Handling Both Success and Error in One Response:
+#### Sometimes, it's useful to include a success or status field in your response to explicitly indicate success or failure. Here's an example that combines both success and error scenarios:
 
 ```
 {
   "status": "success / fail",
-  "data": {
-    "message": "User successfully retrieved.",
-    "user": {
-      "id": 123,
-      "name": "John Doe",
-      "email": "john.doe@example.com"
-    }
-  }
+  "message": "User successfully retrieved.",
+  "data": [
+      {
+        "id": 123,
+        "name": "John Doe",
+        "email": "john.doe@example.com"
+      }
+    ]
 }
 ```
 ```
@@ -111,5 +77,37 @@ Sometimes, it's useful to include a success or status field in your response to 
   }
 }
 ```
+
+#### When an API request is successful, and the expected result is an empty array, you can structure the response to include an empty array in the data field. Here's an example:
+
+By using this approach, you maintain a consistent structure for your API responses, making it clear that the operation was successful even though there is no data in the array. It helps both developers and clients interpret the response consistently.
+
+#### If the API request is successful and there is data, you can include the data in the result field within the data object. Here's an example with some data:
+```
+{
+  "status": "success",
+  "message": "Operation successful.",
+  "data":  [
+      {
+        "id": 1,
+        "name": "Example 1",
+        "description": "This is an example item."
+      },
+      {
+        "id": 2,
+        "name": "Example 2",
+        "description": "Another example item."
+      }
+      // ... more items if applicable
+    ]
+}
+```
+In this example:
+
+* **status**: Indicates the overall status of the response, in this case, "success."
+* **message**: A message indicating the success of the operation.
+    * **data**: This field contains an array with specific data items.
+
+This structure provides a clear indication of the success of the operation along with the actual data returned. It's a common and consistent way to handle successful responses with or without data.
 
 By maintaining a consistent structure for both success and error responses, you make it easier for developers to handle responses programmatically and for clients to interpret the results. Additionally, including clear and informative messages helps in troubleshooting and understanding issues during development and integration.
