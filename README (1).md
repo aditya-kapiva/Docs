@@ -79,7 +79,13 @@ used to convey the results of a client’s request. The status codes are divided
 ```
 
 #### When an API request is successful, and the expected result is an empty array, you can structure the response to include an empty array in the data field. Here's an example:
-
+```
+{
+  "status": "success",
+  "message": "Operation successful.",
+  "data":  []
+}
+```
 By using this approach, you maintain a consistent structure for your API responses, making it clear that the operation was successful even though there is no data in the array. It helps both developers and clients interpret the response consistently.
 
 #### If the API request is successful and there is data, you can include the data in the result field within the data object. Here's an example with some data:
