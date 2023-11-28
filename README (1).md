@@ -56,7 +56,7 @@ used to convey the results of a client’s request. The status codes are divided
 
 ```
 {
-  "status": "success / fail",
+  "status": "success / failure",
   "message": "User successfully retrieved.",
   "data": [
       {
