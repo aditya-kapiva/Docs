@@ -8,8 +8,9 @@
 4. [Managing Usage Limits](#managing-usage-limits)
 5. [Cursor AI Workflow Specification](#cursor-ai-workflow-specification)
 6. [Technology-Specific Rules](#technology-specific-rules)
-7. [Productivity Analysis & Business Impact](#productivity-analysis--business-impact)
-
+--- [Flutter Rules](#flutter-rules)
+--- [Next.js Rules](#nextjs-rules)
+--- [Node + Express Rules](#nodejs--expressjs-rules)
 ---
 
 ## Core Best Practices
@@ -501,3 +502,4 @@ By following this workflow, you can leverage Cursor AI to maintain a well-organi
 - Handle process signals properly
 - Document code properly
 ---
+
