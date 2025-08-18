@@ -7,12 +7,12 @@ T-Shirt sizing is an agile estimation technique that uses relative sizes (XS-XXL
 
 | Size | Effort Level | Time Estimate | Complexity | Team Involvement | Example Work Items |
 |------|-------------|---------------|------------|------------------|--------------------|
-| **XS** | Very small  | <1 day        | Trivial    | Individual       | Minor bug fixes, text changes, config updates |
-| **S**  | Small       | 1-3 days      | Simple     | Individual       | Small features, simple UI changes |
-| **M**  | Medium      | 3-7 days      | Moderate   | 1-2 people       | Medium features, system integrations |
-| **L**  | Large       | 1-2 weeks     | Complex    | Small team (2-3) | Complex features, new microservices |
-| **XL** | Very large  | 2-4 weeks     | High       | Cross-team       | Major functionality, architectural changes |
-| **XXL**| Epic        | 1+ months     | Very high  | Multiple teams   | Multi-component projects |
+| **XS** | Very small  | <3 weeks      | Trivial    | Individual       | Minor bug fixes, text changes, config updates |
+| **S**  | Small       | 1-2 weeks     | Simple     | Individual       | Small features, simple UI changes |
+| **M**  | Medium      | 3-5 weeks     | Moderate   | 1-2 people       | Medium features, system integrations |
+| **L**  | Large       | 6-7 weeks     | Complex    | Small team (2-3) | Complex features, new microservices |
+| **XL** | Very large  | 8-10 weeks    | High       | Cross-team       | Major functionality, architectural changes |
+| **XXL**| Epic        | 11-12 weeks   | Very high  | Multiple teams   | Multi-component projects |
 
 ## Estimation Guidelines
 
