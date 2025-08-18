@@ -29,5 +29,3 @@ T-Shirt sizing is an agile estimation technique that uses relative sizes (XS-XXL
 ✅ Re-evaluate as more information emerges  
 ✅ Include all phases (dev, test, deploy) in estimates  
 ✅ Maintain team-specific sizing standards  
-
-## Visualization
